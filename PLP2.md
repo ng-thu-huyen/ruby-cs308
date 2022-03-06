@@ -68,7 +68,32 @@ to_a and to_ary;\
 to_h and to_hash.\
 Shorter version is explicit conversion. Longer version is implicit conversion.\
 
+##Operators
+Ruby Arithmetic Operators | +, -, \*, \/, \**, \%
+--- | ---
+Ruby Comparison Operators| ==, !=, >, <, >=, <=>, ===, .eql?, equal?
+--- | ---
+Ruby Assignment Operators | =, +=, -=, \*=, \/=, \**=, \%=
+--- | ---
+Ruby Bitwise Operators | &, |, ^, ~, >>, <<
+--- | ---
+Ruby Logical Operators | and, or, &&, ||, !, , not
+--- | ---
+Ruby Ternary Operator | ?: (If Condition is true ? Then value X : Otherwise value Y)
+--- | ---
+Ruby Range Operators | .. (Creates a range from start point to end point inclusive)\ ... (Creates a range from start point to end point exclusive)
 
+##Addresses and binding
+In Ruby, a variable name is bound to a memory address, and different variables with the same value are bound to the same memory reference. 
+```
+x = 1
+y = 1
+puts x.object_id == y.object_id #TRUE
+a = [1, 2, 3, 4, 5, 6]
+b = a
+a.append(10)
+puts b #[1, 2, 3, 4, 5, 6, 10]
+```
 
 ##References
 [1] https://gist.github.com/iangreenleaf/b206d09c587e8fc6399e#:~:text=General%20Ruby%20conventions,suffix%20will%20return%20a%20boolean \
@@ -76,6 +101,8 @@ Shorter version is explicit conversion. Longer version is implicit conversion.\
 [3] https://www.studytonight.com/ruby/reserved-keywords-in-ruby \
 [4] http://www.rubyfleebie.com/2007/07/09/ruby-is-dynamically-and-strongly-typed/ \
 [5] https://zverok.space/blog/2016-01-18-implicit-vs-expicit.html \
+[6] https://www.tutorialspoint.com/ruby/ruby_operators.htm \
+
 
 
 
