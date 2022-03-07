@@ -1,4 +1,5 @@
 # Names, Types and Binding
+Refer to the [file](https://github.com/ng-thu-huyen/ruby-cs308/blob/main/testvariables.rb) for code samples
 ## Naming
 Ryby is a case sensitive language.\
 Variable names in Ruby can be created from alphanumeric characters and the underscore _ character and should be written in snake_case (community standard).\
@@ -25,9 +26,9 @@ var = 10
 #string
 my_string = "Hello World"
 #floating-point number
-float = 0.5
+float_test = 0.5
 #boolean
-boolTest = true
+bool_test = true
 #array
 digits = [0,1,2,3,4,5,6,7,8,9]
 #hash
@@ -67,7 +68,11 @@ to_s and to_str;\
 to_a and to_ary;\
 to_h and to_hash.\
 Shorter version is explicit conversion. Longer version is implicit conversion.\
-
+```
+var = 25
+my_string = "hello"
+puts var.to_s + my_string #prints 25hello
+```
 ## Operators
 Operators | Symbols
 --- | ---
@@ -103,7 +108,7 @@ puts b #[1, 2, 3, 4, 5, 6, 10]
 [3] https://www.studytonight.com/ruby/reserved-keywords-in-ruby \
 [4] http://www.rubyfleebie.com/2007/07/09/ruby-is-dynamically-and-strongly-typed/ \
 [5] https://zverok.space/blog/2016-01-18-implicit-vs-expicit.html \
-[6] https://www.tutorialspoint.com/ruby/ruby_operators.htm \
+[6] https://www.tutorialspoint.com/ruby/ruby_operators.htm 
 
 
 
