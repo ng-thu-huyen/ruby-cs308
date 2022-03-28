@@ -76,7 +76,7 @@ We do not need to use ``break`` to get out of case statements in Ruby and could 
 ## Short-circuit evaluation
 Ruby uses short-circuit evaluation. \
 When the first argument of the AND function evaluates to false, the overall value must be false; and when the first argument of the OR function evaluates to true, the overall value must be true. \
-The precedence of evaluation: 1. ``&&``; 2. ``=``; 3. ``and`` \
+The precedence of evaluation: 1. ``&&``; 2. ``=``; 3. ``and`` 
 ```
 (dog = (true && false)) #false
 ```
