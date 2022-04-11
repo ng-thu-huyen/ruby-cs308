@@ -46,10 +46,27 @@ for i in 0..5
     puts i
 end
 ```
-
-
-
+## Function
+Method names should begin with a lowercase letter. If you begin a method name with an uppercase letter, Ruby might think that it is a constant and hence can parse the call incorrectly. \
+```
+def method_name (var1, var2)
+   expr..
+end
+#set default values for the parameters
+def method_name (var1 = value1, var2 = value2)
+   expr..
+end
+#call the method (alond with the parameters
+method name 17, 9
+```
+### undef Statement
+This cancels the method definition. An undef cannot appear in the method body. \
+By using undef and alias, the interface of the class can be modified independently from the superclass, but notice it may be broke programs by the internal method call to self.
+```
+undef method-name
+```
 
 ##References
 [1] https://www.tutorialspoint.com/ruby/ruby_loops.htm \
-[2] 
+[2] https://www.tutorialspoint.com/ruby/ruby_methods.htm \
+
