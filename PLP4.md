@@ -52,12 +52,18 @@ Method names should begin with a lowercase letter. If you begin a method name wi
 def method_name (var1, var2)
    expr..
 end
-#set default values for the parameters
+#set default values for the parameters (can be in different types)
 def method_name (var1 = value1, var2 = value2)
    expr..
 end
 #call the method (alond with the parameters
 method name 17, 9
+```
+### Ruby alias Statement
+This gives alias to methods or global variables. Aliases cannot be defined within the method body. The alias of the method keeps the current definition of the method, even when methods are overridden.
+```
+alias method-name method-name
+alias global-variable-name global-variable-name
 ```
 ### undef Statement
 This cancels the method definition. An undef cannot appear in the method body. \
@@ -65,6 +71,20 @@ By using undef and alias, the interface of the class can be modified independent
 ```
 undef method-name
 ```
+#Recursion
+Ruby support recursive function.
+```
+def add(num)
+    if num == 1
+        1 # base case 
+    else
+        num + add(num - 1) # recursive step 
+    end
+end
+   
+add(3) 
+```
+
 
 ##References
 [1] https://www.tutorialspoint.com/ruby/ruby_loops.htm \
