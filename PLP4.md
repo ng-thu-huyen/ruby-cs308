@@ -71,8 +71,8 @@ By using undef and alias, the interface of the class can be modified independent
 ```
 undef method-name
 ```
-#Recursion
-Ruby support recursive function.
+## Recursion
+Ruby supports recursive function.
 ```
 def add(num)
     if num == 1
@@ -84,9 +84,14 @@ end
    
 add(3) 
 ```
-
+## Pass-reference-by-value
+Ruby is pass-by-value but the values it passes are references \
+![alt text](https://robertheaton.com/images/RubyPBORAppend.jpg) \
+They’re different names for the same thing; different boxes containing the same object. The function and caller reference the same object in memory, but accessed through different variables. 
 
 ##References
 [1] https://www.tutorialspoint.com/ruby/ruby_loops.htm \
 [2] https://www.tutorialspoint.com/ruby/ruby_methods.htm \
+[3] https://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/ \
+
 
