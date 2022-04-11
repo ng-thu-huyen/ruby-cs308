@@ -50,6 +50,25 @@ end
 Factorial(6)
 
 #Write a function that takes in a string (or your language's equivalent) and splits it into two strings, then returns both strings
-def Split()
+def Split(string)
+    puts (string.split(/ /, 2))
+end
+Split("Hello world")
+
 #Call your functions and save the results of the function calls in variables.
+puts (recursive = Factorial(6))
 #Write a function that tests whether your language is pass-by-reference or pass-by-value.
+#primitive
+val = "Hello"
+def check_pass(arg)
+  arg = "Hi"
+end
+check_pass(val)
+puts val # => Hello (pass by value)
+#non-primivtives
+def append(array)
+    array << 1
+end
+array = [0]
+append(array)
+print(array) #[0,1] pass reference by value
