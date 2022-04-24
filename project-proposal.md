@@ -6,7 +6,7 @@ The user will call the slack bot when they start their work on Slack. It will au
 ## List of commands
 Help: print help \
 start-pomodoro: start tracking time (25-5) \
-stop-pomodoro: stop tracking time and send the report how many hours they have worked \
+stop-pomodoro: stop tracking time and send the report how many hours they have worked 
 ## App Directory
 I plan to integrate Google Calendar on Slack to mark the time. Sine I am also aware that it might not the most efficient way to track time by Google Calendar, I will consider other solutions as well.
 
