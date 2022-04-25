@@ -10,7 +10,7 @@ stop-pomodoro: stop tracking time and send the report how many hours they have w
 ## App Directory
 I plan to integrate Google Calendar on Slack to mark the time. Since I am also aware that it might not the most efficient way to track time by Google Calendar, I will consider other solutions as well.
 
-## Resources:
+## Available projects
 [1} slack bot for timesheet: https://github.com/codica2/timebot#how-to-install-for-your-team \
 [2] slackbot for Youtube latest eposode: https://www.driftingruby.com/episodes/creating-a-simple-slack-bot
 
