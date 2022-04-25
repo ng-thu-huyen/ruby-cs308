@@ -375,8 +375,8 @@ end
 person = Person.new("Huyen", 21)
 
 # use accessor methods
-x = box.printName()
-y = box.printAge()
+x = person.printName()
+y = person.printAge()
 
 puts "Name of the person is : #{x}"
 puts "Age of the person is : #{y}"
@@ -423,7 +423,7 @@ puts "Age of the person is : #{y}"
 ```
 ### The to_s Method
 ```
-class Box
+class Person
    # constructor method
    def initialize(n,a)
       @name, @age = n, a
@@ -470,7 +470,7 @@ end
 person = BigPerson.new("Thu", 1975)
 
 # print the area
-box.printIdentity()
+person.printIdentity()
 ```
 
 ### Method overloading
