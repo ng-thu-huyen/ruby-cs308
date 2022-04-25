@@ -441,6 +441,37 @@ person = Person.new("Hung", 1997)
 puts "String representation of person is : #{person}"
 ```
 
+### Class inheritance 
+Ruby does not support multiple levels of inheritances but Ruby supports mixins. A mixin is like a specialized implementation of multiple inheritance in which only the interface portion is inherited. \
+When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the base class or superclass, and the new class is referred to as the derived class or sub-class. \
+Ruby also supports the concept of subclassing. The syntax for extending a class is simple. Just add a ``<`` character and the name of the superclass to your class statement. 
+```
+# define a class
+class Person
+   # constructor method
+   def initialize(n,a)
+      @name, @age = n, a
+   end
+   def to_s
+      "(n:#@name,a:#@age)"  # string formatting of the object.
+   end
+end
+
+# define a subclass
+class BigPerson < Person
+
+   # add a new instance method
+   def printIdenity
+      puts "(n:#@name,a:#@age)"
+   end
+end
+
+# create an object
+person = BigPerson.new("Thu", 1975)
+
+# print the area
+box.printIdentity()
+```
 ## References
 [1] https://en.wikipedia.org/wiki/Ruby_(programming_language) \
 [2] https://launchschool.com/books/ruby/read/introduction \
@@ -463,6 +494,8 @@ puts "String representation of person is : #{person}"
 [19] https://www.tutorialspoint.com/ruby/ruby_loops.htm \
 [20] https://www.tutorialspoint.com/ruby/ruby_methods.htm \
 [21] https://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/ \
+[22] https://www.tutorialspoint.com/ruby/ruby_object_oriented.htm \
+
 
 
 
