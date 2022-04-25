@@ -20,8 +20,8 @@ end
 person = Person.new("Huyen", 21)
 
 # use accessor methods
-x = box.printName()
-y = box.printAge()
+x = person.printName()
+y = person.printAge()
 
 puts "Name of the person is : #{x}"
 puts "Age of the person is : #{y}"
@@ -66,7 +66,7 @@ puts "Name of the person is : #{x}"
 puts "Age of the person is : #{y}"
 
 # to_string method
-class Box
+class Person
    # constructor method
    def initialize(n,a)
       @name, @age = n, a
@@ -108,7 +108,7 @@ end
 person = BigPerson.new("Thu", 1975)
 
 # print the area
-box.printIdentity()
+person.printIdentity()
 
 #Inheritance
 # define a class
@@ -135,7 +135,7 @@ end
 person = BigPerson.new("Thu", 1975)
 
 # print the area
-box.printIdentity()
+person.printIdentity()
 
 #Method overloading
 class Test
