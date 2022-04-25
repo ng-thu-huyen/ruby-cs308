@@ -1,4 +1,4 @@
-# Final-project-skecth
+# Final-project-sketch
 ## Project idea: Slack bot pomodoro tinmer by Ruby
 ## Description:
 A reminder on slackbot that tracks 25 mins in length for working and 5-min break in between. \
