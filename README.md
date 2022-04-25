@@ -318,10 +318,10 @@ Ruby is pass-by-value but the values it passes are references
 They’re different names for the same thing; different boxes containing the same object. The function and caller reference the same object in memory, but accessed through different variables. 
 
 ## Objects and classes
-Ruby is a pure object-oriented language and everything appears to Ruby as an object. Every value in Ruby is an object. \
+Ruby is a pure object-oriented language and everything appears to Ruby as an object. Every value in Ruby is an object. 
 
 ### Naming convention
-A class definition starts with the keyword ``class``, then the class name and is delimited with an end. The name follows CamelCase. \
+A class definition starts with the keyword ``class``, then the class name and is delimited with an end. The name follows CamelCase. 
 ```
 class Person
    code
@@ -472,6 +472,66 @@ person = BigPerson.new("Thu", 1975)
 # print the area
 box.printIdentity()
 ```
+
+### Method overloading
+Ruby does not support method overloading as Ruby being a dynamically typed language, it does not support static binding at all. In Ruby, when a second method is defined with the same name it completely overrides the previously existing method. The previous method is no longer accessible and hence throws error when we try to access it. \
+```
+class Test
+    def self.sum(a,b)
+        puts(a+b)
+    end
+    def self.sum(a,b,c)
+        puts(a+b+c)
+    end
+      
+end
+Test.sum(3,5) #error
+Test.sum(3,5,7)
+```
+
+#### Implementing method overloading in Ruby by varying the number of arguments
+##### Using Class Methods
+```
+class Test
+    def self.display(*args)
+        case args.size
+            when 1
+                puts "1: Hello #{args[0]}"
+            when 2
+                puts "2: Hello #{args[0]} #{args[1]}"
+            when 3
+                puts "3: Hello #{args[0]} #{args[1]} Welcome to #{args[2]} language."
+        end
+    end
+end 
+Test.display"Geeks!!" 
+Test.display"Geeks!!", "Hope you doing great."
+Test.display"Geeks!!", "Hope you doing great.", "Ruby"
+```
+##### Using Instance Methods
+```
+class Test
+    def display(*args)
+        case args.size
+            when 1
+                puts "1: Hello #{args[0]}"
+            when 2
+                puts "2: Hello #{args[0]} #{args[1]}"
+            when 3
+                puts "3: Hello #{args[0]} #{args[1]} Welcome to #{args[2]} language."
+        end
+    end
+end 
+  
+ob1 = Test.new
+ob2 = Test.new
+ob3 = Test.new
+ob1.display"Geeks!!" 
+ob2.display"Geeks!!", "Hope you doing great."
+ob3.display"Geeks!!", "Hope you doing great.", "Ruby"
+```
+As the number of argument increases the code becomes complex. However we can keep increasing the number of cases to handle varying number of arguments.
+
 ## References
 [1] https://en.wikipedia.org/wiki/Ruby_(programming_language) \
 [2] https://launchschool.com/books/ruby/read/introduction \
@@ -495,6 +555,7 @@ box.printIdentity()
 [20] https://www.tutorialspoint.com/ruby/ruby_methods.htm \
 [21] https://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/ \
 [22] https://www.tutorialspoint.com/ruby/ruby_object_oriented.htm \
+[23] https://www.geeksforgeeks.org/method-overloading-in-ruby/
 
 
 
