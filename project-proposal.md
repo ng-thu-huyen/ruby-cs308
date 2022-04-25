@@ -1,5 +1,5 @@
 # Final-project-sketch
-## Project idea: Slack bot pomodoro timmer by Ruby
+## Project idea: Slack bot pomodoro timer by Ruby
 ## Description:
 A reminder on slackbot that tracks 25 mins in length for working and 5-min break in between. \
 The user will call the slack bot when they start their work on Slack. It will automatically send a message after 25-min and 5-min coresspondingly to finish an interval. The timer only stops when the user send command "stop-poromodo".
