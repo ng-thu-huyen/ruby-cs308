@@ -317,6 +317,130 @@ Ruby is pass-by-value but the values it passes are references
 ![alt text](https://robertheaton.com/images/RubyPBORAppend.jpg) \
 They’re different names for the same thing; different boxes containing the same object. The function and caller reference the same object in memory, but accessed through different variables. 
 
+## Objects and classes
+Ruby is a pure object-oriented language and everything appears to Ruby as an object. Every value in Ruby is an object. \
+
+### Naming convention
+A class definition starts with the keyword ``class``, then the class name and is delimited with an end. The name follows CamelCase. \
+```
+class Person
+   code
+end
+```
+We declare objects of a class using ``new`` keyword. \
+```
+person1 = Person.new
+person2 = Person.new
+```
+### The initialize Method
+The initialize method is a standard Ruby class method and works almost same way as constructor works in other object oriented programming languages. It is preceded by ``def`` keyword as shown below.\
+```
+class Person
+   def initialize(n,a)
+      @name, @age = n, a
+   end
+end
+```
+### The instance variables
+The instance variables are kind of class attributes and they become properties of objects once objects are created using the class. Every object's attributes are assigned individually and share no value with other objects. They are accessed using the ``@`` operator within the class but to access them outside of the class we use public methods, which are called accessor methods. \
+```
+class Person
+   def initialize(n,a)
+      # assign instance variables
+      @name, @age = n, a
+   end
+end
+```
+### The accessor & setter Methods
+To make the variables available from outside the class, they must be defined within accessor methods, these accessor methods are also known as a getter methods. Following example shows the usage of accessor methods. \
+```
+# define a class
+class Person
+   # constructor method
+   def initialize(n,a)
+      @name, @age = n, a
+   end
+
+   # accessor methods
+   def printName
+      @name
+   end
+
+   def printAge
+      @age
+   end
+end
+
+# create an object
+person = Person.new("Huyen", 21)
+
+# use accessor methods
+x = box.printName()
+y = box.printAge()
+
+puts "Name of the person is : #{x}"
+puts "Age of the person is : #{y}"
+```
+Similar to accessor methods, which are used to access the value of the variables, Ruby provides a way to set the values of those variables from outside of the class using setter methods, which are defined as below. \
+```
+# define a class
+class Person
+   # constructor method
+   def initialize(n,a)
+      @name, @age = n, a
+   end
+
+   # accessor methods
+   def geName
+      @name
+   end
+   def getAge
+      @age
+   end
+
+   # setter methods
+   def setName=(value)
+      @name = value
+   end
+   def setAge=(value)
+      @age = value
+   end
+end
+
+# create an object
+person = Person.new("Huyen", 21)
+
+# use setter methods
+person.setName = "Minh"
+person.setAge = 23
+
+# use accessor methods
+x = person.getName()
+y = person.getAge()
+
+puts "Name of the person is : #{x}"
+puts "Age of the person is : #{y}"
+```
+### The to_s Method
+```
+class Box
+   # constructor method
+   def initialize(n,a)
+      @name, @age = n, a
+   end
+   # define to_s method
+   def to_s
+      "(n:#@name,a:#@age)"  # string formatting of the object.
+   end
+end
+
+# create an object
+person = Person.new("Hung", 1997)
+
+# to_s method will be called in reference of string automatically.
+puts "String representation of person is : #{person}"
+```
+
 ## References
 [1] https://en.wikipedia.org/wiki/Ruby_(programming_language) \
 [2] https://launchschool.com/books/ruby/read/introduction \
