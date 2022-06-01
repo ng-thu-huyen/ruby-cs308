@@ -2,7 +2,8 @@
 # Author: Nguyen Thu Huyen - Student ID: 190033
 # This is the final project for Programming Language, Spring 2022, Fulbright University Vietnam instructed by
 # Dr. Nanette Marie Simenas
-# The original idea was inspired by Mario Visic, https://github.com/mariovisic/ruby2d-games/tree/main/03%20-%20Pong
+# The original idea was inspired by Mario Visic, https://github.com/mariovisic/ruby2d-games/tree/main/03%20-%20Pong. I am levelling up the project by allowing 2 players interactive at a time and calculating score for both players.
+# I also learn the basic code for Ruby 2d, https://www.ruby2d.com/learn/get-started/
 
 require 'ruby2d' #a application in Ruby to create games
 set title: 'Pong with Fun' #set title for the game
