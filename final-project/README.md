@@ -6,6 +6,7 @@ This project is an interactive 2D ping-pong game for 2 players written in Ruby. 
 - Score is updated automatically when a player misses the ball. 
 - Sound is integrated so that players feel like they are playing a real ping-pong match. 
 ## How to play
+- Set up the environment. Follow steps from Ruby2d, https://www.ruby2d.com/learn/get-started/.
 - Clone the folder into your laptop 
 - Using any Ruby compiler to open the folder. My recommendation compilers are Visual Studio Code and RubyMine 
 - Hit "Run" and enjoy the match 
