@@ -162,9 +162,9 @@ class Test
         end
     end
 end 
-Test.display"Geeks!!" 
-Test.display"Geeks!!", "Hope you doing great."
-Test.display"Geeks!!", "Hope you doing great.", "Ruby"
+Test.display"World" 
+Test.display"World", "Hope you doing great."
+Test.display"World", "Hope you doing great.", "Ruby"
 
 class Test
     def display(*args)
@@ -182,6 +182,6 @@ end
 ob1 = Test.new
 ob2 = Test.new
 ob3 = Test.new
-ob1.display"Geeks!!" 
-ob2.display"Geeks!!", "Hope you doing great."
-ob3.display"Geeks!!", "Hope you doing great.", "Ruby"
+ob1.display"World" 
+ob2.display"World", "Hope you doing great."
+ob3.display"World", "Hope you doing great.", "Ruby"
